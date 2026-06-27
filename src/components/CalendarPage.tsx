@@ -320,12 +320,13 @@ export const CalendarPage: React.FC = () => {
 
         {/* MONTH GRID VIEW */}
         {viewMode === 'month' && (
-          <div className="flex flex-col w-full text-left" id="month-grid-wrapper">
-            <div className="grid grid-cols-7 border-b border-slate-100 dark:border-slate-850 text-center font-mono text-[10px] tracking-wider text-slate-400 uppercase font-semibold py-3 bg-slate-50/50 dark:bg-slate-950/30">
-              {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((d) => (
-                <div key={d}>{d}</div>
-              ))}
-            </div>
+          <div className="w-full overflow-x-auto">
+            <div className="flex flex-col min-w-[600px] text-left" id="month-grid-wrapper">
+              <div className="grid grid-cols-7 border-b border-slate-100 dark:border-slate-850 text-center font-mono text-[10px] tracking-wider text-slate-400 uppercase font-semibold py-3 bg-slate-50/50 dark:bg-slate-950/30">
+                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((d) => (
+                  <div key={d}>{d}</div>
+                ))}
+              </div>
 
             <div className="grid grid-cols-7 grid-rows-5 h-[500px] divide-x divide-y divide-slate-100 dark:divide-slate-800/40 border-l border-t border-slate-100 dark:border-slate-850">
               {/* Build traditional 35 matrix points relative to current Date scope */}
@@ -372,7 +373,8 @@ export const CalendarPage: React.FC = () => {
               })}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
         {/* CHRONOLOGICAL AGENDA LIST VIEW */}
         {viewMode === 'agenda' && (

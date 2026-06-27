@@ -41,8 +41,8 @@ export interface CalendarEvent {
   endTime: string; // HH:MM
   priority: Priority;
   category: EventCategory;
-  reminder: string; // '5min' | '15min' | '30min' | '1hr' | '1day' | 'none'
-  recurring: 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
+  reminder?: string; // '5min' | '15min' | '30min' | '1hr' | '1day' | 'none'
+  recurring?: 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
   location: string;
   color: string; // Hex color or Tailwind class prefix
 }

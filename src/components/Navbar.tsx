@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 h-20 transition-all z-30 border-b border-slate-200/50 dark:border-slate-800/40 glass">
-      <div className="flex items-center justify-between h-full px-6 max-w-[1600px] mx-auto">
+      <div className="flex items-center justify-between h-full px-4 sm:px-6 max-w-[1600px] mx-auto">
         
         {/* LEFT BRAND SECTION */}
         <div className="flex items-center gap-6 shrink-0">
@@ -155,7 +155,7 @@ export const Navbar: React.FC = () => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 15, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute right-0 mt-3 w-80 max-h-[500px] overflow-hidden rounded-2xl glass shadow-2xl border border-slate-200/70 dark:border-slate-800/80 z-50 flex flex-col"
+                  className="absolute right-0 mt-3 w-[280px] sm:w-80 max-h-[500px] overflow-hidden rounded-2xl glass shadow-2xl border border-slate-200/70 dark:border-slate-800/80 z-50 flex flex-col"
                 >
                   <div className="p-4 border-b border-slate-200/60 dark:border-slate-800/60 flex items-center justify-between bg-slate-50/50 dark:bg-slate-900/20">
                     <span className="font-display font-semibold text-xs tracking-wide text-slate-800 dark:text-white uppercase">Notifications Queue</span>

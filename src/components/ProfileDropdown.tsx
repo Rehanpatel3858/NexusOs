@@ -30,7 +30,7 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({ onClose }) => 
         exit={{ opacity: 0, y: -10, scale: 0.95 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         style={{ boxShadow: '0 30px 60px rgba(0,0,0,0.15)' }}
-        className="absolute right-0 mt-3 w-[350px] rounded-[28px] overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 z-50 p-6 flex flex-col text-left shadow-2xl"
+        className="absolute right-0 mt-3 w-[290px] sm:w-[350px] rounded-[28px] overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 z-50 p-6 flex flex-col text-left shadow-2xl"
         id="profile-dropdown-card"
       >
         {/* TOP USER SECTION */}
