@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../AppContext';
-import { Sparkles, ArrowRight, ShieldCheck, Mail, Lock, User, AtSign } from 'lucide-react';
+import { Sparkles, ArrowRight, ShieldCheck, Mail, Lock, User, AtSign, Eye, EyeOff } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const LoginScreen: React.FC = () => {
@@ -13,6 +13,7 @@ export const LoginScreen: React.FC = () => {
   const [role, setRole] = useState<'student' | 'faculty' | 'professional' | 'entrepreneur' | 'ADMIN'>('student');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -205,13 +206,21 @@ export const LoginScreen: React.FC = () => {
                 <Lock className="w-4 h-4" />
               </span>
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-4 py-2.5 text-sm bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-850 rounded-xl focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none text-slate-800 dark:text-white placeholder-slate-400"
+                className="w-full pl-10 pr-10 py-2.5 text-sm bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-850 rounded-xl focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none text-slate-800 dark:text-white placeholder-slate-400"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 cursor-pointer"
+                title={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
             </div>
           </div>
 
