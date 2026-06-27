@@ -1,4 +1,5 @@
 so for testing all the features of this web use 
-email- redbluee.385@gmail.com
-password - rehanpatel
+email- demo.admin@nexusos.com
+password - NexusDemo2026
+
 

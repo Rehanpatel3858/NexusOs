@@ -29,7 +29,7 @@ export const LoginScreen: React.FC = () => {
     }
 
     if (isSignUp && role === 'ADMIN') {
-      if (email.trim().toLowerCase() !== 'redbluee.385@gmail.com' || password !== 'rehanpatel') {
+      if (email.trim().toLowerCase() !== 'demo.admin@nexusos.com' || password !== 'NexusDemo2026') {
         setError('Unauthorized: ADMIN role can only be registered with designated supervisor credentials.');
         return;
       }
