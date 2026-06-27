@@ -1,0 +1,11 @@
+{
+  "name": "NEXUSOS",
+  "description": "A premium, modern AI-powered productivity dashboard inspired by Apple, Linear, and Notion.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
